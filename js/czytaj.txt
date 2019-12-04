@@ -1,0 +1,40 @@
+3 pliki zosta³y po³¹czone w jeden (combined.js) w celu ograniczenia zapytañ:
+- jquery.min.js
+- jquery.scrollTo.min.js
+- scroll-out.min.js
+
+Oraz dodane skrypty
+
+    <script>
+        //Smooth scrolling
+        jQuery(function ($) {
+            $.scrollTo(0);
+
+            $('#ofirmielink').click(function() { $.scrollTo($('#ofirmie'), 500); });
+            $('#ofertalink').click(function() { $.scrollTo($('#oferta'), 500); });
+            $('#lokalizacjalink').click(function() { $.scrollTo($('#lokalizacja'), 500); });
+            $('#kontaktlink').click(function() { $.scrollTo($('#kontakt'), 500); });
+
+            $('.scrollup').click(function() { $.scrollTo($('body'), 1000); });
+        });
+
+        //ScrollUp
+        $(window).scroll(
+            function () {
+                if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+                else $('.scrollup').fadeOut();
+            }
+        );
+
+        //Needed to hide the mobile menu after clicking the link
+        function hideMobileMenu() {
+            document.getElementById('chk').checked=false;
+        }
+    </script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            ScrollOut({
+                targets: 'h2,h3,p,li'
+            })
+        });
+    </script>
