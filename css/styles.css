@@ -161,11 +161,14 @@ main .content .content-text p {
     opacity: 0;
     line-height: 1.75em;
 }
+main .content .content-text ul {
+    margin: 0.5em 0.5em;
+}
 main .content .content-text ul li {
     font-size: 1.2em;
     list-style-image: url('../img/panel.png');
+    line-height: 1.55em;
     margin: 0.1em 0;
-
     transition: 1s;
     opacity: 0;
 }
@@ -181,6 +184,15 @@ article {
 main .content .content-text p[data-scroll="in"] {
     opacity: 1;
     transition-delay: 1s;
+}
+
+#offer-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column-offer {
+    flex: 1;
 }
 
 footer, footer a {
@@ -376,6 +388,9 @@ p a:hover {
     #logo {
         padding-top: 2.3rem;
         padding-left: 0.75rem;
+    }
+    main .content .content-text ul li {
+        line-height: 1.75em;
     }
 }
 
